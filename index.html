@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="robots" content="noindex, follow" />
+  <title>Item Discontinued</title>
+
+  <style>
+    :root{
+      --bg: #0b0f14;
+      --card: rgba(255,255,255,.06);
+      --border: rgba(255,255,255,.14);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --btn: #ffffff;
+      --btnText: #0b0f14;
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg: #f6f7fb;
+        --card: #ffffff;
+        --border: rgba(16,24,40,.12);
+        --text: rgba(16,24,40,.95);
+        --muted: rgba(16,24,40,.70);
+        --btn: #0b0f14;
+        --btnText: #ffffff;
+        --shadow: 0 10px 25px rgba(16,24,40,.10);
+      }
+    }
+
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html, body { height: 100%; }
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(255,255,255,.10), transparent 55%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(255,255,255,.08), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+    }
+
+    .wrap{
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 18px 16px calc(18px + env(safe-area-inset-bottom));
+    }
+
+    .card{
+      width: 100%;
+      max-width: 420px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      backdrop-filter: blur(10px);
+    }
+
+    .badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 99px;
+      background: #ffb020;
+      box-shadow: 0 0 0 4px rgba(255,176,32,.16);
+      flex: 0 0 auto;
+    }
+
+    h1{
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.2px;
+    }
+
+    p{
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+    }
+
+    .cta{
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    a.btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 14px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      background: var(--btn);
+      color: var(--btnText);
+      border: 0;
+      user-select: none;
+      touch-action: manipulation;
+    }
+
+    a.btn:active{ transform: translateY(1px); }
+
+    .secondary{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 650;
+      font-size: 15px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: transparent;
+      user-select: none;
+      touch-action: manipulation;
+    }
+
+    .footer{
+      margin-top: 14px;
+      font-size: 12.5px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Simple inline icons */
+    .icon{
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="card" role="region" aria-label="Discontinued item notice">
+      <div class="badge">
+        <span class="dot" aria-hidden="true"></span>
+        QR code scan result
+      </div>
+
+      <h1>This item has been discontinued</h1>
+      <p>This item has been discontinued by the manufacturer.</p>
+      <p>To browse more lights, tap the button below to visit our website.</p>
+
+      <div class="cta">
+        <a class="btn" href="https://www.savemoreplumbing.com" rel="noopener">
+          <!-- link icon -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M10 13a5 5 0 0 1 0-7l1.2-1.2a5 5 0 0 1 7 7L17 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M14 11a5 5 0 0 1 0 7L12.8 19.2a5 5 0 1 1-7-7L7 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Browse More Lights
+        </a>
+
+        <!-- Optional: quick back button for mobile browsers -->
+        <a class="secondary" href="javascript:history.back()">
+          <!-- arrow icon -->
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Go Back
+        </a>
+      </div>
+
+      <div class="footer">
+        Savemore Plumbing &amp; Lighting • www.savemoreplumbing.com
+      </div>
+    </section>
+  </main>
+</body>
+</html>
